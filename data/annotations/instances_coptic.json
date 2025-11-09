@@ -1,0 +1,128 @@
+{
+  "info": {
+    "description": "Coptic Manuscript Text Regions",
+    "version": "1.0",
+    "year": 2024,
+    "contributor": "Automated labeling export",
+    "date_created": "2024-05-01"
+  },
+  "licenses": [],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "manuscript_A_page_01.jpg",
+      "width": 2480,
+      "height": 3508,
+      "source": "Manuscript_A"
+    },
+    {
+      "id": 2,
+      "file_name": "manuscript_A_page_02.jpg",
+      "width": 2480,
+      "height": 3508,
+      "source": "Manuscript_A"
+    },
+    {
+      "id": 3,
+      "file_name": "manuscript_B_page_01.jpg",
+      "width": 2400,
+      "height": 3300,
+      "source": "Manuscript_B"
+    },
+    {
+      "id": 4,
+      "file_name": "manuscript_B_page_02.jpg",
+      "width": 2400,
+      "height": 3300,
+      "source": "Manuscript_B"
+    },
+    {
+      "id": 5,
+      "file_name": "manuscript_C_page_01.jpg",
+      "width": 2550,
+      "height": 3400,
+      "source": "Manuscript_C"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "text_region",
+      "supercategory": "document"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [120.0, 180.0, 2100.0, 160.0],
+      "area": 336000.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "A1L1",
+        "transcription": "ⲡⲁⲓ ⲡⲉ ⲡⲉⲛⲥⲱⲧⲏⲣ"
+      }
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [130.0, 360.0, 2080.0, 170.0],
+      "area": 353600.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "A1L2",
+        "transcription": "ⲙⲛ̄ ⲡⲓⲥⲁϩⲟ"
+      }
+    },
+    {
+      "id": 3,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [140.0, 200.0, 2050.0, 165.0],
+      "area": 338250.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "A2L1",
+        "transcription": "ⲁⲩⲱ ⲡⲉⲛⲥⲛⲏⲩ"
+      }
+    },
+    {
+      "id": 4,
+      "image_id": 3,
+      "category_id": 1,
+      "bbox": [110.0, 190.0, 1980.0, 150.0],
+      "area": 297000.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "B1L1",
+        "transcription": "ⲡⲉⲓ ⲥⲁϫⲉ"
+      }
+    },
+    {
+      "id": 5,
+      "image_id": 4,
+      "category_id": 1,
+      "bbox": [100.0, 210.0, 1950.0, 155.0],
+      "area": 302250.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "B2L1",
+        "transcription": "ⲛⲁⲓ ⲉⲧⲙⲏⲧⲉ"
+      }
+    },
+    {
+      "id": 6,
+      "image_id": 5,
+      "category_id": 1,
+      "bbox": [150.0, 220.0, 2100.0, 160.0],
+      "area": 336000.0,
+      "iscrowd": 0,
+      "attributes": {
+        "transcription_id": "C1L1",
+        "transcription": "ⲛⲁϣⲁⲛ ⲟⲩϫⲁⲓ"
+      }
+    }
+  ]
+}
