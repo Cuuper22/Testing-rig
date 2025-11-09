@@ -1,0 +1,9 @@
+{
+  "lines": 3,
+  "total_tokens": 99,
+  "unknown_tokens": 0,
+  "unknown_ratio": 0.0,
+  "added_coptic_tokens": 119,
+  "tokenizer_path": "artifacts/tokenizer/tokenizer.json",
+  "uses_tokenizers_library": false
+}
