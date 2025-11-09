@@ -1,0 +1,21 @@
+# Data pipeline configuration
+seed: 123
+augmentations:
+  elastic:
+    prob: 0.25
+    alpha: 45.0
+    sigma: 6.0
+    alpha_affine: 20.0
+  noise:
+    prob: 0.15
+    var_limit: [5.0, 30.0]
+  brightness_contrast:
+    prob: 0.3
+    brightness_limit: 0.2
+    contrast_limit: 0.2
+  blur:
+    prob: 0.1
+    blur_limit: 3
+  normalize:
+    mean: [0.5, 0.5, 0.5]
+    std: [0.5, 0.5, 0.5]
