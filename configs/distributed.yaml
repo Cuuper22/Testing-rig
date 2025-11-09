@@ -1,0 +1,39 @@
+# Distributed training configuration for multi-accelerator support.
+# Choose the backend that best suits your environment: "lightning" or "accelerate".
+backend: lightning
+
+trainer:
+  accelerator: auto          # Options: cpu, gpu, tpu, auto
+  devices: auto              # Number of devices per node; "auto" uses all visible devices
+  num_nodes: 1               # Number of machines participating in training
+  strategy: auto             # Distributed strategy (ddp, ddp_spawn, fsdp, etc.)
+  precision: 32              # Use 16 or bf16 for mixed precision training
+  accumulate_grad_batches: 1
+  max_epochs: 5
+  log_every_n_steps: 50
+  enable_checkpointing: true
+  deterministic: false
+  limit_train_batches: 10
+  default_root_dir: runs
+  tpu_cores: null            # Set to the number of TPU cores when targeting TPUs
+
+accelerate:
+  mixed_precision: "no"      # Options: no, fp16, bf16
+  gradient_accumulation_steps: 1
+  num_epochs: 5
+  steps_per_epoch: 10
+  logging_dir: runs
+  log_with: null             # e.g. ["tensorboard", "wandb"] when available
+  project_name: toy-training
+  output_dir: checkpoints
+
+model:
+  input_dim: 32
+  hidden_dim: 64
+  num_classes: 10
+  lr: 0.001
+  batch_size: 32
+  dataset_length: 1024
+
+logging:
+  level: INFO
