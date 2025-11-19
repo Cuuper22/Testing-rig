@@ -1,0 +1,5 @@
+{
+  "trocr": {"num_samples": 8, "total_inference_seconds": 4.8},
+  "donut": {"num_samples": 8, "total_inference_seconds": 5.6},
+  "paddleocr": {"num_samples": 8, "total_inference_seconds": 2.4}
+}

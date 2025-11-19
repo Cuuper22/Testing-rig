@@ -1,0 +1,8 @@
+sample_01.png	Order #12345
+sample_02.png	Total $56.78
+sample_03.png	Date 2023-09-01
+sample_04.png	Thank you!
+sample_05.png	Visit again soon
+sample_06.png	Subtotal $45.00
+sample_07.png	Tax $3.60
+sample_08.png	Grand Total $48.60
