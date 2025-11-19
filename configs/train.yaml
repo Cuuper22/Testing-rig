@@ -1,0 +1,71 @@
+seed: 42
+checkpoint_dir: artifacts/checkpoints
+
+data:
+  batch_size: 8
+  num_workers: 0
+  pin_memory: false
+  train_dataset:
+    target: src.training.train.DummySpeechDataset
+    params:
+      size: 256
+      input_features: 64
+      max_time_steps: 120
+      min_time_steps: 80
+      max_label_length: 16
+      seed: 1234
+  val_dataset:
+    target: src.training.train.DummySpeechDataset
+    params:
+      size: 64
+      input_features: 64
+      max_time_steps: 120
+      min_time_steps: 80
+      max_label_length: 16
+      seed: 4321
+
+model:
+  hidden_dim: 256
+  dropout: 0.1
+
+optimizer:
+  lr: 0.0005
+  weight_decay: 0.01
+
+scheduler:
+  name: linear_warmup
+  params:
+    warmup_ratio: 0.1
+    final_lr_scale: 0.1
+
+trainer:
+  max_epochs: 5
+  gradient_clip_val: 1.0
+  gradient_clip_algorithm: norm
+  accumulate_grad_batches: 1
+  log_every_n_steps: 10
+  accelerator: auto
+  devices: auto
+  deterministic: true
+
+precision:
+  precision: bf16-mixed
+
+logging:
+  log_dir: artifacts/logs
+  use_wandb: false
+  project: speech-demo
+  run_name: demo-run
+
+checkpoint:
+  monitor: val_cer
+  mode: min
+  save_top_k: 2
+  filename: "ctc-{epoch:02d}-{val_cer:.4f}"
+  save_last: true
+
+early_stopping:
+  monitor: val_cer
+  patience: 3
+  mode: min
+  min_delta: 0.0001
